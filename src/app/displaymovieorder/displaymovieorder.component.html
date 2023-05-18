@@ -1,0 +1,66 @@
+
+<div class="container-fluid" *ngIf="chk" id="sect2">
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info"><label style="font-weight: bold;">Your Selected Movie</label></div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Movie Image</th>
+                            <th>Movie Name</th>
+                            <th>Movie Ticket Price</th>
+                            <th>Seats Booked</th>
+                            <th>Selected Time</th>
+                            <th>Total Price</th>
+                   
+                        </tr>
+                        <tr>
+                            <td><img src="{{movie.image}}" width="100px" height="50px"/></td>
+                            <td>{{movie.moviename}}</td>
+                            <td>{{movie.ticketprice}}</td>
+                            <td>{{movie.seats}}</td>
+                            <td>{{movie.selectedtime}}</td>
+                            <td>{{movie.totalpice}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid"  id="sect2" *ngIf="!chk">
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info"><label style="font-weight: bold;">Your Previous Selected Movie</label></div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr >
+                            
+                            <th>Movie Name</th>
+                            <th>Movie Ticket Price</th>
+                            <th>Seats Booked</th>
+                            
+                            <th>Total Price</th>
+                            <th>Date</th>
+                   
+                        </tr>
+                        <tr *ngFor="let i of selectedordertable">
+                           
+                            <td>{{i.moviename}}</td>
+                            <td>{{i.ticketprice}}</td>
+                            <td>{{i.bookedseats}}</td>
+                            <td>{{i.totalprice}}</td>
+                            <td>{{i.date}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

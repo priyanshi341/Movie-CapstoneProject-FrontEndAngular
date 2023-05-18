@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+#sect1
+{
+    background-image: url("/assets/Image/backgroundimage1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sect2
+{
+    background-image: url("/assets/Image/backgroundimag8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 560px;
+}
+
+#sect3
+{
+    background-image: url("/assets/Image/backgroundimag8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}

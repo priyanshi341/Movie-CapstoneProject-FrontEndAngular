@@ -1,0 +1,77 @@
+<div class="container-fluid" id="sect2">
+    <br/>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success"><label style="font-style: oblique;font-weight: bold;font-size: larger;">Movie Booking</label></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{movieref.image}}" width="200px" height="150px"/>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="row">
+                            <div class="col-md-12">
+                                <label style="font-style: oblique;font-weight: bold;">Movie Name:</label>&nbsp;
+                                <label>{{movieref.moviename}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <label style="font-style: oblique;font-weight: bold;">Movie Category:</label>&nbsp;
+                                <label>{{movieref.category.name}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <label  style="font-style: oblique;font-weight: bold;">Movie Price:</label>&nbsp;
+                                <label>{{movieref.price | currency:"INR"}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                <div class="col-md-6">
+                                    <label  style="font-style: oblique;font-weight: bold;">Movie seats:</label>
+                                </div>
+                               
+                                <div class="col-md-6">
+                                    <form [formGroup]="bookpageform">
+                                        <select formControlName="select" >
+                                            <option *ngFor="let i of array" value="{{i}}">
+                                                {{i}}
+                                            </option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                                
+                            </div>
+        
+                          </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6"  >
+                                    <input type="button" class="btn btn-info" (click)="action(movieref.time1)" value="{{movieref.time1}}" style="display: inline-block;width: 100%;"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="button" class="btn btn-dark" value="{{movieref.time2}}" (click)="action(movieref.time2)" style="display: inline-block;width: 100%;"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="button" class="btn btn-dark" (click)="action(movieref.time3)" value="{{movieref.time3}}" style="display: inline-block;width: 100%;"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="button" class="btn btn-info" (click)="action(movieref.time4)" value="{{movieref.time4}}" style="display: inline-block;width: 100%;"/>
+                                </div>
+                            </div>
+                            
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+</div>

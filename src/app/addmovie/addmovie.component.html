@@ -1,0 +1,74 @@
+
+<div class="container-fluid" id="sect2">
+    <br/>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-info"><label style="font-weight: bold;"> Add Movie</label>
+                   
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="movieform" (ngSubmit)="buttonaction()">
+                        <label>Movie Name</label>
+                        <input type="text" formControlName="name" class="form-control"/><br/>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Price</label>
+                                <input type="text" formControlName="price" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Seats Available</label>
+                                <input type="text" formControlName="seats" class="form-control" />
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Time Interval 1</label>
+                                <input type="time" formControlName="time1"  class="form-control"/> 
+                            </div>
+                            <div class="col-md-3">
+                                <label>Time Interval 2</label>
+                        <input type="time" formControlName="time2" class="form-control"/>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Time Interval 3</label>
+                        <input type="time" formControlName="time3" class="form-control"/>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Time Interval 4</label>
+                                <input type="time" formControlName="time4" class="form-control"/>
+                            </div>
+                        </div>
+                        <br/>
+                     <div class="row">
+                        <div class="col-md-4"> 
+                            <label>Enabled/Disabled</label>
+                            <input type="text" formControlName="enabled" class="form-control"/></div>
+                        <div class="col-md-4">
+                            <label>Choose Image</label>
+                            <input type="file" (change)="fileaction($event)"/></div>
+                        <div class="col-md-4">
+                            <label>Select Category</label>
+                        <select formControlName="selectcategory" class="form-control" >
+                            
+                          <option *ngFor="let i of category" value="{{i.id}}" >{{i.name}}</option>
+                        </select>
+                        </div>
+                     </div>
+                        
+                        
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: center;">
+                        <input type="submit" value="Add Movie" class="btn btn-success"/>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<br/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info">
+                    Movie List
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                       <tr>
+                        <th>Movie poster</th>
+                        <th>Movie Name</th>
+                        <th>Movie Ticket Price</th>
+                        <th>Seats Available</th>
+                        <th>Action</th>
+                       </tr>
+                       <tr *ngFor="let i of selectedmovie">
+                        <td><img src="{{i.image}}" width="150px" height="65px"/></td>
+                        <td>{{i.moviename}}</td>
+                        <td>{{i.price}}</td>
+                        <td>{{i.seats}}</td>
+                        <td><input type="button" class="btn btn-info" value="Select" (click)="action(i.id)"/></td>
+                       </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

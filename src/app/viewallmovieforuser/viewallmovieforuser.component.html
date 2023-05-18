@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info">
+                    <label style="font-weight: bold;">  Movie List</label>
+                </div>
+                <div class="card-body">
+                <hr/>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="font-style: oblique;font-weight: bold;font-size: larger;">Search:</label>
+                          
+                        </div>
+                        <div class="col-md-11">
+                            <input type="text" name="ename1" class="form-control" [(ngModel)]="ename" (ngModelChange)="search()"/>
+                        </div>
+                    </div>
+                    <hr/>
+                    <table class="table table-striped">
+                       <tr>
+                        <th style="text-align: center;" >Movie poster</th>
+                        <th (click)="sort('moviename')" style="text-align: center;">Movie Name</th>
+                        <th (click)="sort('price')" style="text-align: center;">Movie Ticket Price</th>
+                        <th (click)="sort('seats')" style="text-align: center;">Seats Available</th>
+                        <th style="text-align: center;">Action</th>
+                       </tr>
+                       <tr *ngFor="let i of selectedmovies | paginate:{itemsPerPage:5,currentPage:p} |orderBy:Key:reverse" >
+                        <td width="20%" style="text-align: center;"><img src="{{i.image}}"  height="100px" style="display: inline-block;width: 80%;"/></td>
+                        <td width="20%" style="text-align: center;">{{i.moviename}}</td>
+                        <td width="20%" style="text-align: center;">{{i.price}}</td>
+                        <td width="20%" style="text-align: center;">{{i.seats}}</td>
+                        <td width="20%" style="text-align: center;"><input type="button" class="btn btn-info" value="Select" (click)="action(i.id)" style="display: inline-block;width: 80%;"/></td>
+                       </tr>
+                       <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

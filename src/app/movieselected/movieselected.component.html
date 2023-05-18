@@ -1,0 +1,79 @@
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success"><label style="font-style: oblique;font-weight: bold;font-size: larger;">Movie Detail</label></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{movieref.image}}" width="200px" height="150px"/>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="row">
+                            <div class="col-md-12">
+                                <label style="font-style: oblique;font-weight: bold;">Movie Name:</label>&nbsp;
+                                <label>{{movieref.moviename}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <label style="font-style: oblique;font-weight: bold;">Movie Category:</label>&nbsp;
+                                <label>{{movieref.category.name}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <label  style="font-style: oblique;font-weight: bold;">Movie Price:</label>&nbsp;
+                                <label>{{movieref.price | currency:"INR"}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <label  style="font-style: oblique;font-weight: bold;">Seats:</label>&nbsp;
+                                <label>{{movieref.seats}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <label  style="font-style: oblique;font-weight: bold;">Enabled:</label>&nbsp;
+                                <label>{{movieref.enabled}}</label>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6"  >
+                                    <input type="button" class="btn btn-info"  value="{{movieref.time1}}" style="display: inline-block;width: 100%;"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="button" class="btn btn-dark" value="{{movieref.time2}}"  style="display: inline-block;width: 100%;"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="button" class="btn btn-dark"  value="{{movieref.time3}}" style="display: inline-block;width: 100%;"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="button" class="btn btn-info"  value="{{movieref.time4}}" style="display: inline-block;width: 100%;"/>
+                                </div>
+                            </div>
+                            
+                          
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <input type="button" class="btn btn-warning" (click)="updatefunction()" value="Update" style="display: inline-block;width: 100%;"/>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="button" class="btn btn-danger" (click)="deleteaction()" value="Delete" style="display: inline-block;width: 100%;"/>
+                        </div>
+                        <div class="col-md-3"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+</div>

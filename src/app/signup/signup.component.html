@@ -1,0 +1,49 @@
+
+<div class="container-fluid"  id="sect3">
+    <br/>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-info">Sign-Up</div>
+                <div class="card-body">
+                    <form [formGroup]="signupform" (ngSubmit)="buttonaction()">
+                        <label>UserName</label>
+                        <input type="text" formControlName="username" class="form-control"/>
+                        <span style="color: red;" *ngIf="signupform.controls.username.touched && signupform.controls.username.invalid">
+                            Enter username
+                        </span>
+                        <br/>
+                        <label>Email</label>
+                        <input type="text" formControlName="useremail" class="form-control"/>
+                        <span  style="color: red;" *ngIf="signupform.controls.useremail.touched && signupform.controls.useremail.invalid">
+                            Enter Email
+                        </span>
+                        <br/>
+                        <label>Address</label>
+                        <input type="text" formControlName="useraddress" class="form-control"/>
+                        <span style="color: red;" *ngIf="signupform.controls.useraddress.touched && signupform.controls.useraddress.invalid">
+                            Enter Address
+                        </span>
+                        <br/>
+                        <label>Phone Number</label>
+                        <input type="text" formControlName="userphone" class="form-control"/>
+                        <span style="color: red;" *ngIf="signupform.controls.userphone.touched && signupform.controls.userphone.invalid">
+                            Enter Phone Number
+                        </span>
+                        <br/>
+                        <label>Password</label>
+                        <input type="password" formControlName="userpassword" class="form-control"/>
+                        <span style="color: red;" *ngIf="signupform.controls.userpassword.touched && signupform.controls.userpassword.invalid">
+                            Password minimum length should be 8 and must contain atleat one capital letter
+                        </span>
+                        <br/>
+                        <input type="submit" value="Sign-up" class="btn btn-primary"/>
+                    </form>
+                </div>
+                <div class="card-footer" *ngIf="check"><label style="color: red;font-size: medium;font-weight: bold;">{{msg}}</label></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

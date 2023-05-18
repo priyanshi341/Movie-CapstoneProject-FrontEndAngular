@@ -1,0 +1,127 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" >
+        <img src="/assets/Image/image1.jpg" width="50px" height="50px" style="border-radius: 30px;">&nbsp;&nbsp;
+        <label style="font-weight: bold;font-size: larger;">Movie</label>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a routerLink="/userhomepage" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/viewallforuser" style="color: black;">Select Movie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/useroredrdetail" style="color: black;">Payment Details</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex" >
+         <a href="/login" style="color: black;padding-left: 780px;">Log-Out</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div class="container-fluid"  id="sect1">
+<br/>
+<div class="row">
+  
+<div class="col-md-2">
+  <table class="table table-striped " border="1" style="border-color:black;border-style: solid;border-radius: 10px;">
+    <tr>
+        <td style="text-align: center;font-weight: bolder;font-size: larger;color:white;">Category</td>
+    </tr>
+    <tr *ngFor="let i of category">
+        <td>
+<input type="button" value="{{i.name}}" (click)="action(i.id)" class="btn btn-dark" style="display: inline-block;width: 100%;"/>
+        </td>
+    </tr>
+</table> 
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-7">
+
+
+
+
+<ngb-carousel >
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="/assets/Image/images1.jpg" alt="Random first slide" height="450px" width="100%"/>
+    </div>
+  
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="/assets/Image/images4.jpg" alt="Random second slide" height="450px" width="100%"/>
+    </div>
+  
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="/assets/Image/images5.jpg" alt="Random third slide" height="450px" width="100%"/>
+    </div>
+   
+  </ng-template>
+</ngb-carousel>
+
+</div>
+
+<div class="col-md-2">
+ 
+</div>
+
+</div>
+
+<br/>
+<br/>
+<!--row for most viewd medicines--> 
+<div class="row">
+<div class="col-md-12" style="text-align: center;">
+<label style="font-weight: bolder;font-style: italic;font-size:35px;color: white;">Most Viewed Pictures</label>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-7">
+<div class="row">
+  <div class="col-md-4">
+    <img src="/assets/Image/images2.jpg" width="100%" height="200px"/>
+  </div>
+  <div class="col-md-4">
+    <img src="/assets/Image/images3.jpg" width="100%" height="200px"/>
+  </div>
+  <div class="col-md-4">
+    <img src="/assets/Image/images6.jpg" width="100%" height="200px"/>
+  </div>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
+<br/>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-7">
+<div class="row">
+  <div class="col-md-4">
+    <img src="/assets/Image/images7.jpg" width="100%" height="200px"/>
+  </div>
+  <div class="col-md-4">
+    <img src="/assets/Image/images8.jpg" width="100%" height="200px"/>
+  </div>
+  <div class="col-md-4">
+    <img src="/assets/Image/images9.jpg" width="100%" height="200px"/>
+  </div>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+
+
+
+
+

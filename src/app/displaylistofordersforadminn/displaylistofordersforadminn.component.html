@@ -1,0 +1,33 @@
+<br/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info"><label style="font-weight: bold;">Order List</label></div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr >
+                            <th>User ID</th>
+                            <th>Movie Name</th>
+                            <th>Movie Ticket Price</th>
+                            <th>Seats Booked</th>
+                            
+                            <th>Total Price</th>
+                            <th>Date</th>
+                   
+                        </tr>
+                        <tr *ngFor="let i of ordertable">
+                           
+                            <td>{{i.userid}}</td>
+                            <td>{{i.moviename}}</td>
+                            <td>{{i.ticketprice}}</td>
+                            <td>{{i.bookedseats}}</td>
+                            <td>{{i.totalprice}}</td>
+                            <td>{{i.date}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

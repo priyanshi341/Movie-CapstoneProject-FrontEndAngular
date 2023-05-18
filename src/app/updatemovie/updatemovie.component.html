@@ -1,0 +1,84 @@
+
+<div class="container-fluid" id="sect3">
+    <br/>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                  <label style="font-weight: bold;"> Update Movie Detail</label>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="updatemovie" (ngSubmit)="action()" >
+                        <label>Movie Name</label>
+                        <input type="text" formControlName="name" [(ngModel)]="movie.moviename" value="{{movie.moviename}}" class="form-control"/><br/>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Price</label>
+                                <input type="text" [(ngModel)]="movie.price" value="{{movie.price}}" formControlName="price" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Seats Available</label>
+                                <input type="text" [(ngModel)]="movie.seats" value="{{movie.seats}}" formControlName="seats" class="form-control" />
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Time Interval 1</label>
+                                <input type="time"  [(ngModel)]="movie.time1" value="{{movie.time1}}" formControlName="time1"  class="form-control"/> 
+                            </div>
+                            <div class="col-md-3">
+                                <label>Time Interval 2</label>
+                        <input type="time" [(ngModel)]="movie.time2" value="{{movie.time2}}" formControlName="time2" class="form-control"/>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Time Interval 3</label>
+                        <input type="time" [(ngModel)]="movie.time3" value="{{movie.time3}}" formControlName="time3" class="form-control"/>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Time Interval 4</label>
+                                <input type="time"  [(ngModel)]="movie.time4" value="{{movie.time4}}" formControlName="time4" class="form-control"/>
+                            </div>
+                        </div>
+                        <br/>
+                     <div class="row">
+                        <div class="col-md-6"> 
+                            <label>Enabled:</label>
+                            <input type="text" [(ngModel)]="movie.enabled" value="{{movie.enabled}}"formControlName="enabled" class="form-control"/></div>
+                        
+                        <div class="col-md-6">
+                            <label>Select Category</label>
+                        <select formControlName="selectcategory" class="form-control" >
+                         
+                            
+                          <option *ngFor="let i of category" value="{{i.id}}" >{{i.name}}</option>
+                        </select>
+                        </div>
+                     </div>
+                        <br/>
+
+                     <div class="row">
+                        <div class="col-md-6">
+                            <label>Choose Image</label>
+                            <input type="file" (change)="fileaction($event)"/>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{path}}" width="150px" height="100px" />
+                        </div>
+                     </div>
+                     <br/>
+                        
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: center;">
+                        <input type="submit" value="Update Movie" class="btn btn-success"/>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
